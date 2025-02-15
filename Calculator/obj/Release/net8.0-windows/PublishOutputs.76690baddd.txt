@@ -1,0 +1,5 @@
+C:\Users\Kaleb\Desktop\C#\Calculator.exe
+C:\Users\Kaleb\Desktop\C#\Calculator.dll
+C:\Users\Kaleb\Desktop\C#\Calculator.deps.json
+C:\Users\Kaleb\Desktop\C#\Calculator.runtimeconfig.json
+C:\Users\Kaleb\Desktop\C#\Calculator.pdb
