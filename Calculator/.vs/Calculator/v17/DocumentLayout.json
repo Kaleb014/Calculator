@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{A2A142F3-EB2C-488B-B372-105D71A01BE4}|Calculator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2A142F3-EB2C-488B-B372-105D71A01BE4}|Calculator.csproj|f:\\wpf apps\\calculator\\calculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2A142F3-EB2C-488B-B372-105D71A01BE4}|Calculator.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2A142F3-EB2C-488B-B372-105D71A01BE4}|Calculator.csproj|f:\\wpf apps\\calculator\\calculator\\mvvm\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2A142F3-EB2C-488B-B372-105D71A01BE4}|Calculator.csproj|solutionrelative:mvvm\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "F:\\wpf apps\\Calculator\\Calculator\\MVVM\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModelBase.cs",
@@ -54,12 +58,11 @@
               "RelativeToolTip": "MVVM\\ViewModelBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T03:53:09.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T03:53:09.518Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Button.cs",
               "DocumentMoniker": "F:\\wpf apps\\Calculator\\Calculator\\Model\\Button.cs",
               "RelativeDocumentMoniker": "Model\\Button.cs",
@@ -67,12 +70,11 @@
               "RelativeToolTip": "Model\\Button.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T04:10:01.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T04:10:01.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "F:\\wpf apps\\Calculator\\Calculator\\MVVM\\RelayCommand.cs",
               "RelativeDocumentMoniker": "MVVM\\RelayCommand.cs",
@@ -80,8 +82,7 @@
               "RelativeToolTip": "MVVM\\RelayCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T03:53:00.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T03:53:00.79Z"
             },
             {
               "$type": "Document",
@@ -91,7 +92,7 @@
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\ViewModel\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-14T04:13:23.642Z",
               "EditorCaption": ""
@@ -104,9 +105,42 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-14T04:17:34.692Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "dd6d674a-89a0-4746-a04a-2b86c7299ed1",
+        "Display": 1,
+        "X": 43,
+        "Y": 114,
+        "Width": 1636,
+        "Height": 965,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\wpf apps\\Calculator\\Calculator\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-15T04:54:08.874Z",
               "EditorCaption": ""
             }
           ]
