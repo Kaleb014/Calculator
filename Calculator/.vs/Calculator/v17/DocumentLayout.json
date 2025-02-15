@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\ViewModel\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCAAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAIAwwGYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-14T04:13:23.642Z",
               "EditorCaption": ""
@@ -107,8 +107,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T04:17:34.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T04:17:34.692Z"
             }
           ]
         }

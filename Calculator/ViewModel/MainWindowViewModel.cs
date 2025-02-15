@@ -90,20 +90,43 @@ namespace Calculator.ViewModel
 			{
 				//TODO: Bug test and fix
 
-				string result = string.Empty;
+				bool skipValues = false;
 				string leftExpressionStr = string.Empty;
 				string rightExpressionStr = string.Empty;
 				double leftExpressionDbl = 0;
 				double rightExpressionDbl = 0;
+				char lastChar = ' ';
 				char operatorChar = ' ';
 				int stringLength = _inputValue.Length;
 				int counter = 0;
 
+				//TODO: Fix the logic for multiple decimals
 				foreach (char c in _inputValue)
 				{
 					bool updateInputValue = false;
 					bool resolve = false;
 					counter++;
+
+					//If we have multiple decimals, we skip the rest of the values until finding an operator or end of string
+					if (skipValues)
+					{
+						if (c == '+' || c == '-')
+						{
+							operatorChar = c;
+							skipValues = false;
+							resolve = true;
+						}
+						else if (counter == stringLength)
+						{
+							updateInputValue = true;
+							skipValues = false;
+							resolve = true;
+						}
+						else
+						{
+							continue;
+						}
+					}
 
 					//If we have an operator, we are building the right expression
 					if (operatorChar != ' ')
@@ -112,40 +135,67 @@ namespace Calculator.ViewModel
 						{
 							if (c == '.' && rightExpressionStr.Contains('.'))
 							{
+								skipValues = true;
 								continue;
 							}
 
+							lastChar = c;
 							rightExpressionStr += c;
+						}
+						else if (lastChar == '+' || lastChar == '-')
+						{
+							lastChar = c;
+							operatorChar = c;
 						}
 						else
 						{
+							lastChar = c;
 							operatorChar = c;
 							resolve = true;
 						}
 					}
-					else //We are building the left expression
+					//We are building the left expression
+					else
 					{
 						if (c != '+' && c != '-')
 						{
 							if (c == '.' && leftExpressionStr.Contains('.'))
 							{
+								skipValues = true;
 								continue;
 							}
 
+							lastChar = c;
 							leftExpressionStr += c;
 						}
 						else
 						{
-							operatorChar = c;
+							if (leftExpressionStr.Length == 0)
+							{
+								lastChar = c;
+								leftExpressionStr += c;
+							}
+							else if (lastChar == '+' || lastChar == '-')
+							{
+								lastChar = c;
+								leftExpressionStr = c.ToString();
+							}
+							else
+							{
+								lastChar = c;
+								operatorChar = c;
+							}
 						}
 					}
 
+					//If we are at the end of the string, we need to resolve the expression
 					if (counter == stringLength)
 					{
 						updateInputValue = true;
 						resolve = true;
 					}
-						
+
+					//Resolve the expression
 					if (resolve)
 					{
 						if (leftExpressionStr.Length == 0)
