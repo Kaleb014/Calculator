@@ -1,0 +1,229 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        xmlns:viewModel="clr-namespace:Calculator.ViewModel"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="350">
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox
+            Background="LightGray"
+            Name="txtInput"
+            VerticalAlignment="Center"
+            Width="auto"
+            Height="75"
+            FontSize="32"
+            TextAlignment="Right"
+            VerticalContentAlignment="Center"
+            Text="{Binding inputvalue,
+                    UpdateSourceTrigger=PropertyChanged}"
+        />
+        <Grid
+            Grid.Row="1"
+            Background="LightSlateGray"
+        >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Name="btn7"
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="{Binding Buttons[7].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn8"
+                Grid.Row="0"
+                Grid.Column="1"
+                Content="{Binding Buttons[8].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn9"
+                Grid.Row="0"
+                Grid.Column="2"
+                Content="{Binding Buttons[9].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn4"
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="{Binding Buttons[4].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Content="{Binding Buttons[5].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn6"
+                Grid.Row="1"
+                Grid.Column="2"
+                Content="{Binding Buttons[6].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn1"
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="{Binding Buttons[1].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn2"
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="{Binding Buttons[2].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn3"
+                Grid.Row="2"
+                Grid.Column="2"
+                Content="{Binding Buttons[3].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btn0"
+                Grid.Row="3"
+                Grid.Column="0"
+                Content="{Binding Buttons[0].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Grid.ColumnSpan="2"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btnDecimal"
+                Grid.Row="3"
+                Grid.Column="2"
+                Content="{Binding Buttons[10].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btnClear"
+                Grid.Row="0"
+                Grid.Column="3"
+                Content="{Binding Buttons[11].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding Buttons[11].command}"
+            />
+            <Button
+                Name="btnAdd"
+                Grid.Row="1"
+                Grid.Column="3"
+                Content="{Binding Buttons[12].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btnSubtract"
+                Grid.Row="2"
+                Grid.Column="3"
+                Content="{Binding Buttons[13].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding UpdateStringCommand}"
+                Click="btn_Click"
+            />
+            <Button
+                Name="btnEqual"
+                Grid.Row="3"
+                Grid.Column="3"
+                Content="{Binding Buttons[14].value}"
+                FontSize="48"
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                Margin="5"
+                Command="{Binding Buttons[14].command}"
+            />
+        </Grid>
+    </Grid>
+</Window>
