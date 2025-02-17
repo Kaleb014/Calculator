@@ -8,7 +8,7 @@ namespace Calculator.ViewModel
 	{
 		public RelayCommand UpdateStringCommand => new RelayCommand(execute => UpdateString(selectedButtonValue));
 		public RelayCommand ClearStringCommand => new RelayCommand(execute => ClearString(), canExecute => string.IsNullOrEmpty(input.value) == false);
-		public RelayCommand CalculateValueCommand => new RelayCommand(execute => CalculateValue(input.value), canExecute => string.IsNullOrEmpty(input.value) == false);
+		public RelayCommand BuildExpressionCommand => new RelayCommand(execute => BuildExpression(input.value), canExecute => string.IsNullOrEmpty(input.value) == false);
 
 		private Input input;
 		private Button selectedButton; //TODO: Implement selected button logic <-- may end up not needing this
@@ -38,7 +38,7 @@ namespace Calculator.ViewModel
 			buttons.Add(new Button { name = "btnClear", value = "Clr", isSelected = false, command = ClearStringCommand });
 			buttons.Add(new Button { name = "btnAdd", value = "+", isSelected = false, command = new RelayCommand(execute => UpdateString("+")) });
 			buttons.Add(new Button { name = "btnSubtract", value = "-", isSelected = false, command = new RelayCommand(execute => UpdateString("-")) });
-			buttons.Add(new Button { name = "btnEquals", value = "=", isSelected = false, command = CalculateValueCommand });
+			buttons.Add(new Button { name = "btnEquals", value = "=", isSelected = false, command = BuildExpressionCommand });
 		}
 
 		public ObservableCollection<Button> Buttons
@@ -84,12 +84,10 @@ namespace Calculator.ViewModel
 			}
 		}
 
-		private void CalculateValue(string _inputValue = "")
+		private void BuildExpression(string _inputValue = "")
 		{
 			if (!string.IsNullOrWhiteSpace(_inputValue))
 			{
-				//TODO: Bug test and fix
-
 				bool skipValues = false;
 				string leftExpressionStr = string.Empty;
 				string rightExpressionStr = string.Empty;
@@ -100,7 +98,6 @@ namespace Calculator.ViewModel
 				int stringLength = _inputValue.Length;
 				int counter = 0;
 
-				//TODO: Fix the logic for multiple decimals
 				foreach (char c in _inputValue)
 				{
 					bool updateInputValue = false;
@@ -127,8 +124,7 @@ namespace Calculator.ViewModel
 							continue;
 						}
 					}
-
-					if (!skipValues)
+					else
 					{
 						//If we have an operator, we are building the right expression
 						if (operatorChar != ' ')
