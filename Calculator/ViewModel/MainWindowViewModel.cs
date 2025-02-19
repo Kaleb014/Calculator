@@ -5,12 +5,12 @@ namespace Calculator.ViewModel
 {
 	class MainWindowViewModel : ViewModelBase
 	{
-		//Should Clr and Decimal be considered as operators?
-		//Should they be there own type?
-
 		public ObservableCollection<NumericButtonViewModel> NumericButtons { get; set; }
 		public ObservableCollection<OperatorButtonViewModel> OperatorButtons { get; set; }
+		public DecimalButtonViewModel DecimalButton { get; set; }
+		public ClearButtonViewModel ClearButton { get; set; }
 		public EqualButtonViewModel EqualButton { get; set; }
+		public InputAreaViewModel InputArea { get; set; }
 
 		public RelayCommand NumericButtonCommand => new RelayCommand(execute => HandleNumericInput());
 		public RelayCommand OperatorButtonCommand => new RelayCommand(execute => HandleOperatorInput());
@@ -36,13 +36,15 @@ namespace Calculator.ViewModel
 
 			OperatorButtons = new ObservableCollection<OperatorButtonViewModel>
 			{
-				new OperatorButtonViewModel("btnDecimal", ".", DecimalButtonCommand),
-				new OperatorButtonViewModel("btnClear", "Clr", ClearInputTextCommand),
 				new OperatorButtonViewModel("btnAdd", "+", OperatorButtonCommand),
 				new OperatorButtonViewModel("btnSubtract", "-", OperatorButtonCommand)
 			};
 
+			DecimalButton = new DecimalButtonViewModel("btnDecimal", ".", DecimalButtonCommand);
+			ClearButton = new ClearButtonViewModel("btnClear", "Clr", ClearInputTextCommand);
 			EqualButton = new EqualButtonViewModel("btnEqual", "=", EqualButtonCommand);
+
+			InputArea = new InputAreaViewModel(string.Empty);
 		}
 
 		private void HandleNumericInput()
@@ -60,7 +62,7 @@ namespace Calculator.ViewModel
 		}
 		private void ClearInputText()
 		{
-			//Clear
+			InputArea.InputText = string.Empty;
 		}
 		private void ResolveExpression()
 		{

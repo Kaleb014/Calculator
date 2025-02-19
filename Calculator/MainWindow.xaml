@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         xmlns:viewModel="clr-namespace:Calculator.ViewModel"
         mc:Ignorable="d"
-        Title="Calculator" Height="475" Width="350"
+        Title="Calculator" Height="475" Width="350" Icon="/Resources/Icons/calculator.png"
         Background="{StaticResource Window}"
         >
     <Window.DataContext>
@@ -24,7 +24,8 @@
             Height="75"
             FontSize="32"
             TextAlignment="Right"
-            Text=""
+            DataContext="{Binding InputArea}"
+            Text="{Binding InputText}"
         />
         <Grid
             Grid.Row="1"
@@ -127,7 +128,7 @@
                 Name="btnDecimal"
                 Grid.Row="3"
                 Grid.Column="2"
-                DataContext="{Binding OperatorButtons[0]}"
+                DataContext="{Binding DecimalButton}"
                 Command="{Binding Command}"
                 Content="{Binding Text}"
             />
@@ -135,7 +136,7 @@
                 Name="btnClear"
                 Grid.Row="0"
                 Grid.Column="3"
-                DataContext="{Binding OperatorButtons[1]}"
+                DataContext="{Binding ClearButton}"
                 Command="{Binding Command}"
                 Content="{Binding Text}"
             />
@@ -143,7 +144,7 @@
                 Name="btnAdd"
                 Grid.Row="1"
                 Grid.Column="3"
-                DataContext="{Binding OperatorButtons[2]}"
+                DataContext="{Binding OperatorButtons[0]}"
                 Command="{Binding Command}"
                 Content="{Binding Text}"
             />
@@ -151,7 +152,7 @@
                 Name="btnSubtract"
                 Grid.Row="2"
                 Grid.Column="3"
-                DataContext="{Binding OperatorButtons[3]}"
+                DataContext="{Binding OperatorButtons[1]}"
                 Command="{Binding Command}"
                 Content="{Binding Text}"
             />
