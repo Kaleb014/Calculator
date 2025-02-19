@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         xmlns:viewModel="clr-namespace:Calculator.ViewModel"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="350"
+        Title="Calculator" Height="475" Width="350"
         Background="{StaticResource Window}"
         >
     <Window.DataContext>
@@ -14,7 +14,7 @@
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -46,92 +46,123 @@
                 Name="btn7"
                 Grid.Row="0"
                 Grid.Column="0"
-                Content="7"
+                DataContext="{Binding NumericButtons[7]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn8"
                 Grid.Row="0"
                 Grid.Column="1"
-                Content="8"
+                DataContext="{Binding NumericButtons[8]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn9"
                 Grid.Row="0"
                 Grid.Column="2"
-                Content="9"
+                DataContext="{Binding NumericButtons[9]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn4"
                 Grid.Row="1"
                 Grid.Column="0"
-                Content="4"
+                DataContext="{Binding NumericButtons[4]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn5"
                 Grid.Row="1"
                 Grid.Column="1"
-                Content="5"
+                DataContext="{Binding NumericButtons[5]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn6"
                 Grid.Row="1"
                 Grid.Column="2"
-                Content="6"
+                DataContext="{Binding NumericButtons[6]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn1"
                 Grid.Row="2"
                 Grid.Column="0"
-                Content="1"
+                DataContext="{Binding NumericButtons[1]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn2"
                 Grid.Row="2"
                 Grid.Column="1"
-                Content="2"
+                DataContext="{Binding NumericButtons[2]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn3"
                 Grid.Row="2"
                 Grid.Column="2"
-                Content="3"
+                DataContext="{Binding NumericButtons[3]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btn0"
                 Grid.Row="3"
                 Grid.Column="0"
-                Content="0"
                 Grid.ColumnSpan="2"
+                DataContext="{Binding NumericButtons[0]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btnDecimal"
                 Grid.Row="3"
                 Grid.Column="2"
-                Content="."
+                DataContext="{Binding OperatorButtons[0]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btnClear"
                 Grid.Row="0"
                 Grid.Column="3"
-                Content="Clr"
+                DataContext="{Binding OperatorButtons[1]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btnAdd"
                 Grid.Row="1"
                 Grid.Column="3"
-                Content="+"
+                DataContext="{Binding OperatorButtons[2]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btnSubtract"
                 Grid.Row="2"
                 Grid.Column="3"
-                Content="-"
+                DataContext="{Binding OperatorButtons[3]}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
             />
             <Button
                 Name="btnEqual"
                 Grid.Row="3"
                 Grid.Column="3"
-                Content="="
+                DataContext="{Binding EqualButton}"
+                Command="{Binding Command}"
+                Content="{Binding Text}"
+                
             />
         </Grid>
     </Grid>

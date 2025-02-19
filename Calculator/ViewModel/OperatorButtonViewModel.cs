@@ -4,15 +4,33 @@ namespace Calculator.ViewModel
 {
 	internal class OperatorButtonViewModel : ViewModelBase
 	{
-		public string Name { get; set; }
-		public string? Value { get; set; }
-		public RelayCommand? command { get; set; }
+		private string? _name { get; set; }
+		private string? _text { get; set; }
+		private RelayCommand? _command { get; set; }
 
-		public OperatorButtonViewModel(string name, string? value, RelayCommand? command)
+		public string Name
 		{
-			Name = name;
-			Value = value;
-			this.command = command;
+			get => _name;
+			set { if (_name != value) { _name = value; } }
+		}
+
+		public string? Text
+		{
+			get => _text;
+			set { if (_text != value) { _text = value; } }
+		}
+
+		public RelayCommand? Command
+		{
+			get => _command;
+			set { if (_command != value) { _command = value; } }
+		}
+
+		public OperatorButtonViewModel(string name, string text, RelayCommand command)
+		{
+			_name = name;
+			_text = text;
+			_command = command;
 		}
 	}
 }

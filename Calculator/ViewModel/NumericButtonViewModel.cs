@@ -5,31 +5,31 @@ namespace Calculator.ViewModel
 	internal class NumericButtonViewModel : ViewModelBase
 	{
 		private string? _name { get; set; }
-		private string? _value { get; set; }
+		private string? _text { get; set; }
 		private RelayCommand? _command { get; set; }
 
 		public string Name
 		{
 			get => _name;
-			set => _name = value;
+			set { if (_name != value) { _name = value; } }
 		}
 
-		public string? Value
+		public string? Text
 		{
-			get => _value;
-			set => _value = value;
+			get => _text;
+			set { if (_text != value) { _text = value; } }
 		}
 
 		public RelayCommand? Command
 		{
 			get => _command;
-			set => _command = value;
+			set { if (_command != value) { _command = value; } }
 		}
 
-		public NumericButtonViewModel(string name, string value, RelayCommand command)
+		public NumericButtonViewModel(string name, string text, RelayCommand command)
 		{
 			_name = name;
-			_value = value;
+			_text = text;
 			_command = command;
 		}
 	}

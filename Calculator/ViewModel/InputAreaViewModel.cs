@@ -4,11 +4,15 @@ namespace Calculator.ViewModel
 {
 	internal class InputAreaViewModel : ViewModelBase
 	{
-		public string InputValue { get; set; }
-
-		public InputAreaViewModel()
+		private string _inputText { get; set; }
+		public string InputText 
 		{
-			InputValue = "0";
+			get => _inputText; 
+			set { if (_inputText != value) { _inputText = value; } OnPropertyChanged(); }
+		}
+		public InputAreaViewModel(string inputText)
+		{
+			_inputText = inputText;
 		}
 	}
 }

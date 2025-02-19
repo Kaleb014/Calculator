@@ -8,15 +8,16 @@
     <!--TextBox-->
     <Style TargetType="TextBox">
         <Setter Property="Background" Value="{DynamicResource TextBox}"/>
-        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextBoxText}"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="BorderThickness" Value="0"/>
     </Style>
 
     <!--Buttons-->
     <Style TargetType="Button">
         <Setter Property="Background" Value="{DynamicResource Button}"/>
-        <Setter Property="Foreground" Value="{DynamicResource Text}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ButtonText}"/>
         <Setter Property="FontSize" Value="48"/>
         <Setter Property="Margin" Value="5"/>
 
