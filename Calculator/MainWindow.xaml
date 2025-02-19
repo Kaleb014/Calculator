@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Calculator"
         xmlns:viewModel="clr-namespace:Calculator.ViewModel"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="350">
+        Title="Calculator" Height="450" Width="350"
+        Background="{StaticResource Window}"
+        >
     <Window.DataContext>
         <viewModel:MainWindowViewModel/>
     </Window.DataContext>
@@ -17,20 +19,15 @@
         </Grid.RowDefinitions>
 
         <TextBox
-            Background="LightGray"
             Name="txtInput"
-            VerticalAlignment="Center"
             Width="auto"
             Height="75"
             FontSize="32"
             TextAlignment="Right"
-            VerticalContentAlignment="Center"
-            Text="{Binding inputvalue,
-                    UpdateSourceTrigger=PropertyChanged}"
+            Text=""
         />
         <Grid
             Grid.Row="1"
-            Background="LightSlateGray"
         >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -49,180 +46,92 @@
                 Name="btn7"
                 Grid.Row="0"
                 Grid.Column="0"
-                Content="{Binding Buttons[7].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="7"
             />
             <Button
                 Name="btn8"
                 Grid.Row="0"
                 Grid.Column="1"
-                Content="{Binding Buttons[8].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="8"
             />
             <Button
                 Name="btn9"
                 Grid.Row="0"
                 Grid.Column="2"
-                Content="{Binding Buttons[9].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="9"
             />
             <Button
                 Name="btn4"
                 Grid.Row="1"
                 Grid.Column="0"
-                Content="{Binding Buttons[4].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="4"
             />
             <Button
                 Name="btn5"
                 Grid.Row="1"
                 Grid.Column="1"
-                Content="{Binding Buttons[5].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="5"
             />
             <Button
                 Name="btn6"
                 Grid.Row="1"
                 Grid.Column="2"
-                Content="{Binding Buttons[6].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="6"
             />
             <Button
                 Name="btn1"
                 Grid.Row="2"
                 Grid.Column="0"
-                Content="{Binding Buttons[1].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="1"
             />
             <Button
                 Name="btn2"
                 Grid.Row="2"
                 Grid.Column="1"
-                Content="{Binding Buttons[2].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="2"
             />
             <Button
                 Name="btn3"
                 Grid.Row="2"
                 Grid.Column="2"
-                Content="{Binding Buttons[3].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="3"
             />
             <Button
                 Name="btn0"
                 Grid.Row="3"
                 Grid.Column="0"
-                Content="{Binding Buttons[0].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
+                Content="0"
                 Grid.ColumnSpan="2"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
             />
             <Button
                 Name="btnDecimal"
                 Grid.Row="3"
                 Grid.Column="2"
-                Content="{Binding Buttons[10].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="."
             />
             <Button
                 Name="btnClear"
                 Grid.Row="0"
                 Grid.Column="3"
-                Content="{Binding Buttons[11].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding Buttons[11].command}"
+                Content="Clr"
             />
             <Button
                 Name="btnAdd"
                 Grid.Row="1"
                 Grid.Column="3"
-                Content="{Binding Buttons[12].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="+"
             />
             <Button
                 Name="btnSubtract"
                 Grid.Row="2"
                 Grid.Column="3"
-                Content="{Binding Buttons[13].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding UpdateStringCommand}"
-                Click="btn_Click"
+                Content="-"
             />
             <Button
                 Name="btnEqual"
                 Grid.Row="3"
                 Grid.Column="3"
-                Content="{Binding Buttons[14].value}"
-                FontSize="48"
-                BorderBrush="DarkGray"
-                BorderThickness="2"
-                Margin="5"
-                Command="{Binding Buttons[14].command}"
+                Content="="
             />
         </Grid>
     </Grid>

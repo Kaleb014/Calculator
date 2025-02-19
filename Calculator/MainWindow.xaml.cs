@@ -10,11 +10,5 @@ namespace Calculator
 		{
 			InitializeComponent();
 		}
-
-		private void btn_Click(object sender, RoutedEventArgs e)
-		{
-			MainWindowViewModel vm = (MainWindowViewModel)DataContext;
-			vm.selectedButtonValue = ((Button)sender).Content.ToString();
-		}
 	}
 }

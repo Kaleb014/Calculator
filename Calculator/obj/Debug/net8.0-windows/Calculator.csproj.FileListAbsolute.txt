@@ -20,3 +20,6 @@ F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.genruntime
 F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\ref\Calculator.dll
 F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\Calculator.sourcelink.json
+F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\Resources\Styles\Colors.baml
+F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\Resources\Styles\Styles.baml
+F:\wpf apps\Calculator\Calculator\obj\Debug\net8.0-windows\App.baml
