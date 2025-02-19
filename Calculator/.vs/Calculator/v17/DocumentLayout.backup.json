@@ -74,8 +74,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T02:32:28.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T02:32:28.124Z"
             },
             {
               "$type": "Document",
@@ -86,8 +85,7 @@
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\Resources\\Styles\\Styles.xaml",
               "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-19T02:05:59.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T02:05:59.314Z"
             },
             {
               "$type": "Document",
@@ -99,8 +97,7 @@
               "RelativeToolTip": "ViewModel\\InputAreaViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T01:05:51.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T01:05:51.911Z"
             },
             {
               "$type": "Document",
@@ -112,8 +109,7 @@
               "RelativeToolTip": "ViewModel\\OperatorButtonViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T01:05:43.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T01:05:43.425Z"
             },
             {
               "$type": "Document",
@@ -125,8 +121,7 @@
               "RelativeToolTip": "ViewModel\\NumericButtonViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T01:05:13.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T01:05:13.411Z"
             },
             {
               "$type": "Document",
@@ -136,7 +131,7 @@
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\ViewModel\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCoAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T01:05:11.041Z",
               "EditorCaption": ""
@@ -150,8 +145,7 @@
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-15T04:54:08.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T04:54:08.874Z"
             },
             {
               "$type": "Document",
@@ -162,8 +156,7 @@
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-19T00:13:42.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T00:13:42.324Z"
             },
             {
               "$type": "Document",
@@ -175,8 +168,7 @@
               "RelativeToolTip": "ViewModel\\EqualButtonViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T22:00:24.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T22:00:24.953Z"
             },
             {
               "$type": "Document",
@@ -187,8 +179,7 @@
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\Resources\\Styles\\Colors.xaml",
               "RelativeToolTip": "Resources\\Styles\\Colors.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-19T02:06:03.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T02:06:03.372Z"
             }
           ]
         }
