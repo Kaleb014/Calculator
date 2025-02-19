@@ -34,13 +34,13 @@ namespace Calculator.ViewModel
 
 			OperatorButtons = new ObservableCollection<OperatorButtonViewModel>
 			{
-				new OperatorButtonViewModel("btnDecimal", ".", NumericButtonCommand),
-				new OperatorButtonViewModel("btnClear", "Clr", NumericButtonCommand),
-				new OperatorButtonViewModel("btnAdd", "+", NumericButtonCommand),
-				new OperatorButtonViewModel("btnSubtract", "-", NumericButtonCommand)
+				new OperatorButtonViewModel("btnDecimal", ".", OperatorButtonCommand),
+				new OperatorButtonViewModel("btnClear", "Clr", OperatorButtonCommand),
+				new OperatorButtonViewModel("btnAdd", "+", OperatorButtonCommand),
+				new OperatorButtonViewModel("btnSubtract", "-", OperatorButtonCommand)
 			};
 
-			EqualButton = new EqualButtonViewModel("btnEqual", "=", NumericButtonCommand);
+			EqualButton = new EqualButtonViewModel("btnEqual", "=", EqualButtonCommand);
 		}
 
 		private void AddInputToString()
