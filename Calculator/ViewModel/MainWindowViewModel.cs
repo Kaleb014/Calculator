@@ -102,6 +102,7 @@ namespace Calculator.ViewModel
 			double leftDouble = 0;
 			double rightDouble = 0;
 			char operation = ' ';
+			bool isRightSide = false;
 
 			if (_inputText.Count == 0)
 				return;
@@ -117,10 +118,15 @@ namespace Calculator.ViewModel
 				string _text = text;
 				if (double.TryParse(_text, out double result))
 				{
-					if (leftDouble == 0 && _text.Length > 0)
-						leftDouble = result;
-					else if (rightDouble == 0 && _text.Length > 0)
+					if (!isRightSide && _text.Length > 0)
+					{ 
+						leftDouble = result; 
+						isRightSide = true; 
+					}
+					else if (_text.Length > 0)
+					{
 						rightDouble = result;
+					}
 				}
 
 				if (_text != string.Empty && operation != ' ')
@@ -143,7 +149,7 @@ namespace Calculator.ViewModel
 
 			InputArea.InputText = leftDouble.ToString();
 			_inputText.Clear();
-			_inputText.Add(leftDouble.ToString());
+			_inputText.Add(InputArea.InputText);
 			_listIndex = 0;
 		}
 	}
