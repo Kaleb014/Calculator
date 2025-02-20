@@ -18,7 +18,7 @@ namespace Calculator.ViewModel
 		public RelayCommand ClearInputTextCommand => new RelayCommand(execute => ClearInputText());
 		public RelayCommand EqualButtonCommand => new RelayCommand(execute => ResolveExpression());
 
-		private List<string> _inputText = new List<string>();
+		private List<string> _inputText = [string.Empty];
 		private int _listIndex = 0;
 
 		public MainWindowViewModel()
@@ -59,11 +59,19 @@ namespace Calculator.ViewModel
 		private void HandleOperatorInput(string? param)
 		{
 			InputArea.InputText += param;
+
+			_inputText.Add(param);
+			_listIndex++;
+			_inputText.Add(string.Empty);
 			_listIndex++;
 		}
 		private void HandleDecimalInput()
 		{
+			if (_inputText[_listIndex].Contains("."))
+				return;
 
+			InputArea.InputText += ".";
+			_inputText[_listIndex] += ".";
 		}
 		private void ClearInputText()
 		{
@@ -71,7 +79,50 @@ namespace Calculator.ViewModel
 		}
 		private void ResolveExpression()
 		{
-			//Equal button has been pressed
+			double leftDouble = 0;
+			double rightDouble = 0;
+			char operation = ' ';
+
+			if (_inputText.Count == 0)
+				return;
+
+			foreach (string text in _inputText)
+			{
+				if (text == "+" || text == "-")
+				{
+					operation = text[0];
+					continue;
+				}
+					
+				string _text = text;
+				if (double.TryParse(_text, out double result))
+				{
+					if (leftDouble == 0 && _text.Length > 0)
+						leftDouble = result;
+					else if (rightDouble == 0 && _text.Length > 0)
+						rightDouble = result;
+				}
+
+				if (leftDouble != 0 && rightDouble != 0)
+				{
+					switch (operation)
+					{
+						case '+':
+							leftDouble += rightDouble;
+							break;
+						case '-':
+							leftDouble -= rightDouble;
+							break;
+					}
+
+					rightDouble = 0;
+				}
+			}
+
+			InputArea.InputText = leftDouble.ToString();
+			_inputText.Clear();
+			_inputText.Add(leftDouble.ToString());
+			_listIndex = 0;
 		}
 	}
 }
