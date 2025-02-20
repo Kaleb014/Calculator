@@ -58,12 +58,29 @@ namespace Calculator.ViewModel
 		}
 		private void HandleOperatorInput(string? param)
 		{
-			InputArea.InputText += param;
+			if (_inputText[_listIndex] == string.Empty)
+			{
+				if (_inputText.Count > 1 &&
+				(_inputText[_listIndex - 1] == "+" || _inputText[_listIndex - 1] == "="))
+				{
+					_inputText[_listIndex] += param;
+					InputArea.InputText += param;
+				}
+				else
+				{
+					_inputText[_listIndex] += param;
+					InputArea.InputText += param;
+				}
+			}
 
-			_inputText.Add(param);
-			_listIndex++;
-			_inputText.Add(string.Empty);
-			_listIndex++;
+			else if (_inputText[_listIndex] != "+" && _inputText[_listIndex] != "-")
+			{
+				_inputText.Add(param);
+				_listIndex++;
+				_inputText.Add(string.Empty);
+				_listIndex++;
+				InputArea.InputText += param;
+			}
 		}
 		private void HandleDecimalInput()
 		{
@@ -76,6 +93,9 @@ namespace Calculator.ViewModel
 		private void ClearInputText()
 		{
 			InputArea.InputText = string.Empty;
+			_inputText.Clear();
+			_inputText.Add(string.Empty);
+			_listIndex = 0;
 		}
 		private void ResolveExpression()
 		{
@@ -103,7 +123,7 @@ namespace Calculator.ViewModel
 						rightDouble = result;
 				}
 
-				if (leftDouble != 0 && rightDouble != 0)
+				if (_text != string.Empty && operation != ' ')
 				{
 					switch (operation)
 					{
@@ -113,6 +133,8 @@ namespace Calculator.ViewModel
 						case '-':
 							leftDouble -= rightDouble;
 							break;
+						default:
+							return;
 					}
 
 					rightDouble = 0;

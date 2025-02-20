@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\ViewModel\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAASwG0AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAADgv1MAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T04:00:39.49Z",
               "EditorCaption": ""
@@ -86,8 +86,7 @@
               "ToolTip": "F:\\wpf apps\\Calculator\\Calculator\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-15T04:54:08.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T04:54:08.874Z"
             }
           ]
         }
