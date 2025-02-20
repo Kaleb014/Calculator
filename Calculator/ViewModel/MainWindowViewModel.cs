@@ -12,8 +12,8 @@ namespace Calculator.ViewModel
 		public EqualButtonViewModel EqualButton { get; set; }
 		public InputAreaViewModel InputArea { get; set; }
 
-		public RelayCommand NumericButtonCommand => new RelayCommand(execute => HandleNumericInput());
-		public RelayCommand OperatorButtonCommand => new RelayCommand(execute => HandleOperatorInput());
+		public RelayCommand NumericButtonCommand => new RelayCommand(execute => HandleNumericInput(execute.ToString()));
+		public RelayCommand OperatorButtonCommand => new RelayCommand(execute => HandleOperatorInput(execute.ToString()));
 		public RelayCommand DecimalButtonCommand => new RelayCommand(execute => HandleDecimalInput());
 		public RelayCommand ClearInputTextCommand => new RelayCommand(execute => ClearInputText());
 		public RelayCommand EqualButtonCommand => new RelayCommand(execute => ResolveExpression());
@@ -47,18 +47,23 @@ namespace Calculator.ViewModel
 			InputArea = new InputAreaViewModel(string.Empty);
 		}
 
-		private void HandleNumericInput()
+		private void HandleNumericInput(string? param)
 		{
-			//Add the value of the button to the current list index
-			//Index will be incremented when an operator is pressed or entered
+			InputArea.InputText += param;
+
+			if (_inputText.Count > 0)
+				_inputText[_listIndex] += param;
+			else
+				_inputText.Add(param);
 		}
-		private void HandleOperatorInput()
+		private void HandleOperatorInput(string? param)
 		{
-			//Add/Subtract
+			InputArea.InputText += param;
+			_listIndex++;
 		}
 		private void HandleDecimalInput()
 		{
-			//Decimal
+
 		}
 		private void ClearInputText()
 		{
